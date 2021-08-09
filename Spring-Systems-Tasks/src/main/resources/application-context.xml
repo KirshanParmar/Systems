@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean id="person" class="com.spring.core.task.Person">
+		<property name="id" value="1"></property>
+		<property name="name" value="kirshan"></property>
+		<property name="gender" value="male"></property>
+
+	</bean>
+	<bean id="employee" class="com.spring.core.task.Employee"
+		parent="person">
+		<property name="emplCode" value="2778"></property>
+	</bean>
+
+	<bean id="address" class="com.spring.core.task.Address"
+		parent="employee">
+		<property name="address" value="karachi"></property>
+	</bean>
+
+
+</beans>
